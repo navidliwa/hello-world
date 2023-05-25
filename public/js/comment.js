@@ -1,5 +1,3 @@
-const { post } = require("../../controllers");
-
 const commmentFormHandler = async (e) => {
     e.preventDefault();
     console.log("Adding comment...");
@@ -25,4 +23,4 @@ const commmentFormHandler = async (e) => {
 
 document
     .querySelector('#comment-form')
-    .addEventListener('submit', commmentFormHandler);
+    .addEventListener('submit', commmentFormHandler)
