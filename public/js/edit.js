@@ -16,15 +16,15 @@ const editPostFormHandler = async (e) => {
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            window.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
     }
-}
+};
 
 const deletePost = async () => {
-    console.log('Deleting');
+    console.log('Deleting...');
     const postId = document.querySelector('#postId').value.trim();
     console.log(postId);
     
@@ -36,7 +36,7 @@ const deletePost = async () => {
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            window.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }

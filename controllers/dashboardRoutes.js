@@ -3,6 +3,7 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+    console.log("dashboard", req.session);
     try {
         // Get all posts and JOIN with user data
         const postData = await Post.findAll({
@@ -29,7 +30,7 @@ router.get('/newPost', withAuth, (req, res) => {
 
 router.get('/edit/:id', withAuth,  async (req, res) => {
     try {
-        const postData = await Post.findByPk(req.params.id);
+        const postData = await Post.findByPk(req.params.id, {});
     
         const post = postData.get({ plain: true });
         // res.json(post);

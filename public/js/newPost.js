@@ -1,6 +1,6 @@
 const editPostFormHandler = async (e) => {
     e.preventDefault();
-    console.log("Editing post...");
+    console.log("Posting...");
 
     const title = document.querySelector('#title-post').value.trim();
     const body = document.querySelector('#body-post').value.trim();
@@ -13,7 +13,7 @@ const editPostFormHandler = async (e) => {
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            window.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
