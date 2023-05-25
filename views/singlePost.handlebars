@@ -9,4 +9,14 @@
     {{user.username}}
     {{/each}}
     {{/if}}
+
+    <form id="comment-form">
+        <h3>Make a Comment</h3>
+        <h4>Body:</h4>
+        <input type="text" id="body-comment">
+        <input type="hidden" id="postId" value={{post.id}}>
+        <button type="submit">Comment</button>
+    </form>
 </div>
+
+<script src="/js/comment.js"></script>
