@@ -25,7 +25,7 @@ Hello World is a simple blog site where users can signup and begin making posts,
 
 - Existing users can login in through the login page or signup through the signup page. If not signed in, clicking on Dashboard will redirect to login page.
 
-![login](./assets/login)
+![login](./assets/login.jpg)
 ![signup](./assets/signup.jpg)
 
 - Once logged in, users will be directed to their Dashboard which will populate with their posts. Clicking on a post from the Dashboard will allow users to make edit to that post.
