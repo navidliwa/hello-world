@@ -7,7 +7,19 @@ const editPostFormHandler = async (e) => {
     const postId = document.querySelector('#postId').value.trim();
 
     if (title && body && postId) {
-        
+        console.log("postId", postId);
+
+        const response = await fetch('/api/posts/' + postId + {
+            method: 'PUT',
+            body: JSON.stringify({title, body}),
+            headers: { 'Content-Type': 'application/json' },
+        });
+
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
+        }
     }
 }
 
