@@ -4,7 +4,7 @@
         <a href="/dashboard">Dashboard</a>
 
         {{#if logged_in}}
-        <a id="logout" href="/">Logout</a>
+        <a id="logout" href="/logout">Logout</a>
         {{/if}}
 
         {{#unless logged_in}}
@@ -21,4 +21,6 @@
     <a href="/dashboard/newPost"><button>Make a Post</button></a>
 
 </div>
+{{#if logged_in}}
 <script src="/js/logout.js"></script>
+{{/if}}
